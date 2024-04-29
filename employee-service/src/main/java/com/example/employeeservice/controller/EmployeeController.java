@@ -13,8 +13,12 @@ import java.util.List;
 @RequestMapping("/employee")
 public class EmployeeController {
     private static final Logger LOGGER = LoggerFactory.getLogger(EmployeeController.class);
-    @Autowired
+
     EmployeeRepository repository;
+
+    public EmployeeController(EmployeeRepository repository) {
+        this.repository = repository;
+    }
 
     @PostMapping
     public Employee add(@RequestBody Employee employee){

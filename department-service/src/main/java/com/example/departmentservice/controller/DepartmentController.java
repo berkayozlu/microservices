@@ -15,10 +15,16 @@ import java.util.List;
 @RequestMapping("/department")
 public class DepartmentController {
     private static final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
-    @Autowired
+
     private DepartmentRepository repository;
-    @Autowired
+
     private EmployeeClient employeeClient;
+
+    public DepartmentController(DepartmentRepository repository, EmployeeClient employeeClient) {
+        this.repository = repository;
+        this.employeeClient = employeeClient;
+    }
+
     @PostMapping
     public Department add(@RequestBody Department department){
         LOGGER.info("Department add {}", department);
