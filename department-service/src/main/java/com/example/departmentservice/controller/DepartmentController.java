@@ -22,6 +22,5 @@ public class DepartmentController {
         this.repository = repository;
         this.employeeClient = employeeClient;
     }
-    
 
 }
