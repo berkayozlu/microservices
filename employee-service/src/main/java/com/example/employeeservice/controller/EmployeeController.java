@@ -2,11 +2,9 @@ package com.example.employeeservice.controller;
 
 import com.example.employeeservice.model.Employee;
 import com.example.employeeservice.repository.EmployeeRepository;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/employee")
@@ -19,5 +17,8 @@ public class EmployeeController {
         this.repository = repository;
     }
 
-
+    @GetMapping("/{id}")
+    public Optional<Employee> findById(@PathVariable Long id){
+        return repository.findById(id);
+    }
 }
