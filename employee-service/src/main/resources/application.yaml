@@ -1,4 +1,13 @@
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/your_database_name
+    username: username
+    password: password
+    driver-class-name: org.postgresql.Driver
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      hibernate:
+        ddl-auto: update
   application:
     name: employee-service
   config:
