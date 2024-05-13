@@ -1,13 +1,15 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/your_database_name
-    username: username
-    password: password
+    url: jdbc:postgresql://localhost:5432/employee-service
+    username: postgres
+    password: admin
     driver-class-name: org.postgresql.Driver
     jpa:
+      ddl: true
       database-platform: org.hibernate.dialect.PostgreSQLDialect
       hibernate:
-        ddl-auto: update
+        ddl-auto: create
+    show-sql: true
   application:
     name: employee-service
   config:
