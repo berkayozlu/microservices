@@ -1,3 +1,1 @@
-
-Department service successfully converted to postgresql.
-Employee service successfully converted to postgresql.
+Sucessfully converted to a postgresql database. Latest: Five microservices and PostgreSQL are being deployed. We can see our services in the service registry. Thanks to the API gateway, we can access two of our services through a single port. Similarly, we can reach both of our services by going to their individual ports.
